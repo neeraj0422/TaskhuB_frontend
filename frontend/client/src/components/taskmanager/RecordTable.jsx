@@ -30,14 +30,14 @@ const RecordTable = () => {
 
   useEffect(() => {
     // Fetch records from the API
-    axios.get("http://localhost:4000/table/records").then((response) => {
+    axios.get("https://taskhubbackenddd.onrender.com/table/records").then((response) => {
       setRecords(response.data);
     });
   }, []);
   const handleBaseconeStatusChange = (id, Basecone) => {
     // Update the Basecone of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { Basecone })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { Basecone })
       .then(() => {
         // Update the local state with the updated Basecone
         const updatedRecords = records.map((record) =>
@@ -49,7 +49,7 @@ const RecordTable = () => {
   const handleBankStatusChange = (id, Bank) => {
     // Update the Bank of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { Bank })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { Bank })
       .then(() => {
         // Update the local state with the updated Bank
         const updatedRecords = records.map((record) =>
@@ -61,7 +61,7 @@ const RecordTable = () => {
   const handleSalaryEntryStatusChange = (id, SalaryEntry) => {
     // Update the SalaryEntry of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { SalaryEntry })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { SalaryEntry })
       .then(() => {
         // Update the local state with the updated SalaryEntry
         const updatedRecords = records.map((record) =>
@@ -73,7 +73,7 @@ const RecordTable = () => {
   const handlePayslipsStatusChange = (id, Payslips) => {
     // Update the Payslips of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { Payslips })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { Payslips })
       .then(() => {
         // Update the local state with the updated Payslips
         const updatedRecords = records.map((record) =>
@@ -86,7 +86,7 @@ const RecordTable = () => {
   const handleDividendStatusChange = (id, Dividend) => {
     // Update the Dividend of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { Dividend })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { Dividend })
       .then(() => {
         // Update the local state with the updated Divident
         const updatedRecords = records.map((record) =>
@@ -98,7 +98,7 @@ const RecordTable = () => {
   const handleCorporatetaxStatusChange = (id, Corporatetax) => {
     // Update the Corporatetax of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { Corporatetax })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { Corporatetax })
       .then(() => {
         // Update the local state with the updated  Corporatetax
         const updatedRecords = records.map((record) =>
@@ -109,7 +109,7 @@ const RecordTable = () => {
   };
   const handleVatStatusChange = (id, Vat) => {
     // Update the Vat of a record
-    axios.put(`http://localhost:4000/table/records/${id}`, { Vat }).then(() => {
+    axios.put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { Vat }).then(() => {
       // Update the local state with the updated Vat
       const updatedRecords = records.map((record) =>
         record._id === id ? { ...record, Vat } : record
@@ -120,7 +120,7 @@ const RecordTable = () => {
   const handleAnnualTaxStatusChange = (id, AnnualTax) => {
     // Update the AnnualTax of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { AnnualTax })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { AnnualTax })
       .then(() => {
         // Update the local state with the updated AnnualTax
         const updatedRecords = records.map((record) =>
@@ -132,7 +132,7 @@ const RecordTable = () => {
   const handleCashFlowStatementStatusChange = (id, CashFlowStatement) => {
     // Update the CashFlowStatement of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { CashFlowStatement })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { CashFlowStatement })
       .then(() => {
         // Update the local state with the updated CashFlowStatement
         const updatedRecords = records.map((record) =>
@@ -144,7 +144,7 @@ const RecordTable = () => {
   const handleProfitLossStatusChange = (id, ProfitLoss) => {
     // Update the ProfitLossof a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { ProfitLoss })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { ProfitLoss })
       .then(() => {
         // Update the local state with the updated ProfitLoss
         const updatedRecords = records.map((record) =>
@@ -156,7 +156,7 @@ const RecordTable = () => {
   const handleTrialBalanceStatusChange = (id, TrialBalance) => {
     // Update the TrialBalance of a record
     axios
-      .put(`http://localhost:4000/table/records/${id}`, { TrialBalance })
+      .put(`https://taskhubbackenddd.onrender.com/table/records/${id}`, { TrialBalance })
       .then(() => {
         // Update the local state with the updated TrialBalance
         const updatedRecords = records.map((record) =>
@@ -168,7 +168,7 @@ const RecordTable = () => {
 
   const handleDelete = (id) => {
     // Delete a record
-    axios.delete(`http://localhost:4000/table/records/${id}`).then(() => {
+    axios.delete(`https://taskhubbackenddd.onrender.com/table/records/${id}`).then(() => {
       // Remove the deleted record from the local state
       const updatedRecords = records.filter((record) => record._id !== id);
       setRecords(updatedRecords);
